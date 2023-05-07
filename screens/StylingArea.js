@@ -1,7 +1,6 @@
 import React from 'react'
 import { View,StyleSheet, Button,Text} from 'react-native';
 import { ScrollView } from 'react-native';
-import { BlurView } from 'expo-blur';
 import { Card } from 'react-native-paper';
 
 
@@ -14,10 +13,10 @@ import { Card } from 'react-native-paper';
       height:'100%',
       alignItems:'center',
       justifyContent:'center'}}>
-        <Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Decoloracion:</Text> 
-        <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Tinturacion:
+        <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Decoloracion:</Text></Card>
+        <Card><Text  style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Tinturacion:
         servicio que se trata de cambiar el tono del cabello</Text></Card>
-      <Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Cortes de cabello</Text>
+      <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Cortes de cabello</Text></Card>
       <Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Alisados</Text>
       <Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Tratamientos</Text>
       <Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Planchado</Text>
