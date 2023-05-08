@@ -17,10 +17,10 @@ import { Card } from 'react-native-paper';
         <Card><Text  style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Tinturacion:
         servicio que se trata de cambiar el tono del cabello</Text></Card>
       <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Cortes de cabello</Text></Card>
-      <Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Alisados</Text>
-      <Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Tratamientos</Text>
-      <Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Planchado</Text>
-      <Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Pistoleado</Text>
+      <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Alisados</Text></Card>
+      <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Tratamientos</Text></Card>
+      <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Planchado</Text></Card>
+      <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Pistoleado</Text></Card>
       <Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Secado</Text>
       <Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Peinados</Text>
     </ScrollView>
