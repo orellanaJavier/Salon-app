@@ -1,5 +1,5 @@
 import { Card } from 'react-native-paper';
-import { StyleSheet, View,Button,Image ,} from 'react-native';
+import { StyleSheet, View,Button,Image ,TextInput,Text} from 'react-native';
 import  React from 'react';
 import { NavigationContainer, } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -18,7 +18,7 @@ function HomeScreen({navigation}){
         </Button></Card>
         <Card><Button title='Styling Area' onPress={()=> navigation.navigate('StylingArea')}>
           </Button></Card>
-          <Card><Button title='Cabina Area'  onPress={()=> navigation.navigate('CabinaArea')}>
+          <Card><Button  title='Cabina Area'  onPress={()=> navigation.navigate('CabinaArea')}>
         </Button></Card>
     </View>
   );
@@ -26,8 +26,14 @@ function HomeScreen({navigation}){
 
 function Registro({navigation}){
   return(
-    <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
-      <Card><Button style={{po}} title='Aceptar' onPress={()=> navigation.navigate('Home')}></Button></Card>
+    <View style={{flex:1,backgroundColor:'rgba(157,228,244,1)'}}>
+      <Image resizeMode='cover' source={require('./assets/imagen1.png')} style = {styleSheet.imagen1}/>
+      <Text style={styleSheet.text1}>Email</Text>
+      <TextInput style={styleSheet.input1} placeholder='example@gmail.com'/>
+      <Text style={styleSheet.text2}>Contraseña</Text>
+      <TextInput style={styleSheet.input2} placeholder='21212828'/>
+      <Card style={{position:'absolute',left:96,paddingTop:8,paddingRight:19,paddingLeft:18,paddingBottom:8,width:129,top:474,}}>
+        <Button title='Registrar' onPress={()=> navigation.navigate('Home')}/></Card>
     </View>
   );
 };
@@ -52,9 +58,56 @@ const styleSheet = StyleSheet.create({
   styleImage9:{
     position:'absolute',
     borderRadius:10,
-    width:324,
+    width:326,
     height:563,
-    flex:1,
-    justifyContent:'center',
+    alignItems:'center',
+  },
+  imagen1:{
+    position:'absolute',
+    width:365,
+    height:202,
+    borderRadius:10,
+  },
+  text1:{
+    position:'absolute',
+    textAlign:'left',
+    fontWeight:'400',
+    fontSize:14,
+    left:18,
+    top:267,
+    width:43,
+  },
+  text2:{
+    position:'absolute',
+    textAlign:'left',
+    fontWeight:'400',
+    fontSize:14,
+    left:18,
+    top:385,
+    width:75,
+  },
+  input1:{
+    position:'absolute',
+    width:285,
+    height:48,
+    borderRadius:10,
+    backgroundColor:'rgba(239,236,236,1)',
+    top:294,
+    left:18,
+  },
+  input2:{
+    position:'absolute',
+    width:285,
+    height:48,
+    borderRadius:10,
+    backgroundColor:'rgba(239,236,236,1)',
+    left:18,
+    top:412,
+  },
+  button1:{
+    position:'absolute',
+    left:96,
+    width:129,
+    top:474,
   },
 });
