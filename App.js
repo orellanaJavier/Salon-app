@@ -1,5 +1,5 @@
 import { Card } from 'react-native-paper';
-import { StyleSheet, View,Button,Image ,TextInput,Text} from 'react-native';
+import { StyleSheet, View,Button,Image ,TextInput,Text,ScrollView} from 'react-native';
 import  React from 'react';
 import { NavigationContainer, } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -24,17 +24,41 @@ function HomeScreen({navigation}){
   );
 };
 
-function Registro({navigation}){
+function Login({navigation}){
   return(
     <View style={{flex:1,backgroundColor:'rgba(157,228,244,1)'}}>
       <Image resizeMode='cover' source={require('./assets/imagen1.png')} style = {styleSheet.imagen1}/>
+      <Text>Inicia sesion con tu cuenta</Text>
       <Text style={styleSheet.text1}>Email</Text>
       <TextInput style={styleSheet.input1} placeholder='example@gmail.com'/>
       <Text style={styleSheet.text2}>Contraseña</Text>
       <TextInput style={styleSheet.input2} placeholder='21212828'/>
       <Card style={{position:'absolute',left:96,paddingTop:8,paddingRight:19,paddingLeft:18,paddingBottom:8,width:129,top:474,}}>
-        <Button title='Registrar' onPress={()=> navigation.navigate('Home')}/></Card>
+        <Button title='Ingresar' onPress={()=> navigation.navigate('Home')}/></Card>
     </View>
+  );
+};
+
+function Registro({navigation}){
+  return(
+    <ScrollView contentContainerStyle={{
+      flex:1,
+      width:'100%',
+      height:'100%',
+      alignItems:'center',
+      justifyContent:'center'}}>
+    <View style={{flex:1,backgroundColor:'rgba(157,228,244,1)'}}>
+    <Image resizeMode='cover' source={require('./assets/imagen2.png')} style={styleSheet.imagen2} />
+    <Text style={styleSheet.text2}>Usuario</Text>
+    <TextInput style={styleSheet.input3}/>
+    <Text style={styleSheet.text1}>Email</Text>
+    <TextInput style={styleSheet.input1} placeholder='example@gmail.com'/>
+    <Text style={styleSheet.text2}>Contraseña</Text>
+    <TextInput style={styleSheet.input2} placeholder='21212828'/>
+    <Card style={{position:'absolute',left:96,paddingTop:8,paddingRight:19,paddingLeft:18,paddingBottom:8,width:129,top:474,}}>
+      <Button title='Ingresar' onPress={()=> navigation.navigate('Login')}/></Card>
+  </View>
+  </ScrollView>
   );
 };
 
@@ -46,6 +70,7 @@ function App() {
     <Stack.Screen name='NailsBar' component={NailsBar}/>
     <Stack.Screen name='StylingArea' component={StylingArea}/>
     <Stack.Screen name='CabinaArea' component={CabinaArea}/>
+    <Stack.Screen name='Login' component={Login}/>
     <Stack.Screen name='Registro' component={Registro}/>
     </Stack.Navigator>
     </NavigationContainer>
@@ -67,6 +92,14 @@ const styleSheet = StyleSheet.create({
     width:365,
     height:202,
     borderRadius:10,
+  },
+  imagen2:{
+    position:'absolute',
+    width:365,
+    height:202,
+    borderRadius:10,
+    left:8,
+    right:8,
   },
   text1:{
     position:'absolute',
@@ -103,6 +136,15 @@ const styleSheet = StyleSheet.create({
     backgroundColor:'rgba(239,236,236,1)',
     left:18,
     top:412,
+  },
+  input3:{
+    position:'absolute',
+    width:285,
+    height:48,
+    borderRadius:10,
+    backgroundColor:'rgba(239,236,236,1)',
+    top:285,
+    left:18,
   },
   button1:{
     position:'absolute',
