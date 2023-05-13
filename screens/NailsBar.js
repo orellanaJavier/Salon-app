@@ -8,8 +8,13 @@ import {View,StyleSheet,Button,Text, ScrollView } from 'react-native';
     <ScrollView contentContainerStyle = {{
       flex:1,
       width:'100%',
-      height:'100%'
-    }}></ScrollView>
+      height:'100%',
+      alignItems:'center',
+      justifyContent:'center'}}>
+        <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Uñas acrilicas</Text></Card>
+        <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Manicure</Text></Card>
+        <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Limado</Text></Card>
+      </ScrollView>
 
   </View>
   )
@@ -21,9 +26,9 @@ export default NailsBar;
 const styleSheet = StyleSheet.create({
     container:{
       flex: 1,
-      backgroundColor: '#'
-
-
+    backgroundColor:'#fff',
+    alignItems:'center',
+    justifyContent:'center',
     }  
 });
 
