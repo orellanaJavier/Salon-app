@@ -2,6 +2,8 @@ import React from 'react';
 import { View, Text,Button,StyleSheet,TextInput,ScrollView,Image } from 'react-native';
 import { Card } from 'react-native-paper';
 
+
+
 function Registro({navigation})  {
   return (
     <View style={{flex:1,backgroundColor:'rgba(157,228,244,1)'}}>
