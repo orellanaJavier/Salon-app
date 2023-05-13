@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import NailsBar from './screens/NailsBar';
 import StylingArea from './screens/StylingArea';
 import CabinaArea from './screens/CabinaArea';
+import Registro from './navigation/Registro';
 
 
 const Stack = createNativeStackNavigator();
@@ -14,11 +15,11 @@ function HomeScreen({navigation}){
   return(
     <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
       <Image resizeMode='cover' source={require('./assets/homescreen.png')} style = {styleSheet.styleImage9}/>
-      <Card><Button title='Nails Bar'  onPress={()=> navigation.navigate('NailsBar')}>
+      <Card style={{top:-100}} ><Button title='Nails Bar'  onPress={()=> navigation.navigate('NailsBar')}>
         </Button></Card>
         <Card><Button title='Styling Area' onPress={()=> navigation.navigate('StylingArea')}>
           </Button></Card>
-          <Card><Button  title='Cabina Area'  onPress={()=> navigation.navigate('CabinaArea')}>
+          <Card style={{top:100}}><Button  title='Cabina Area'  onPress={()=> navigation.navigate('CabinaArea')}>
         </Button></Card>
     </View>
   );
@@ -28,37 +29,14 @@ function Login({navigation}){
   return(
     <View style={{flex:1,backgroundColor:'rgba(157,228,244,1)'}}>
       <Image resizeMode='cover' source={require('./assets/imagen1.png')} style = {styleSheet.imagen1}/>
-      <Text>Inicia sesion con tu cuenta</Text>
+      <Text style={styleSheet.text3}>!Bienvenido de nuevo!</Text>
       <Text style={styleSheet.text1}>Email</Text>
       <TextInput style={styleSheet.input1} placeholder='example@gmail.com'/>
       <Text style={styleSheet.text2}>Contraseña</Text>
       <TextInput style={styleSheet.input2} placeholder='21212828'/>
-      <Card style={{position:'absolute',left:96,paddingTop:8,paddingRight:19,paddingLeft:18,paddingBottom:8,width:129,top:474,}}>
+      <Card style={{position:'absolute',left:96,paddingTop:8,paddingRight:19,paddingLeft:18,paddingBottom:8,width:150,top:474,}}>
         <Button title='Ingresar' onPress={()=> navigation.navigate('Home')}/></Card>
     </View>
-  );
-};
-
-function Registro({navigation}){
-  return(
-    <ScrollView contentContainerStyle={{
-      flex:1,
-      width:'100%',
-      height:'100%',
-      alignItems:'center',
-      justifyContent:'center'}}>
-    <View style={{flex:1,backgroundColor:'rgba(157,228,244,1)'}}>
-    <Image resizeMode='cover' source={require('./assets/imagen2.png')} style={styleSheet.imagen2} />
-    <Text style={styleSheet.text2}>Usuario</Text>
-    <TextInput style={styleSheet.input3}/>
-    <Text style={styleSheet.text1}>Email</Text>
-    <TextInput style={styleSheet.input1} placeholder='example@gmail.com'/>
-    <Text style={styleSheet.text2}>Contraseña</Text>
-    <TextInput style={styleSheet.input2} placeholder='21212828'/>
-    <Card style={{position:'absolute',left:96,paddingTop:8,paddingRight:19,paddingLeft:18,paddingBottom:8,width:129,top:474,}}>
-      <Button title='Ingresar' onPress={()=> navigation.navigate('Login')}/></Card>
-  </View>
-  </ScrollView>
   );
 };
 
@@ -93,14 +71,6 @@ const styleSheet = StyleSheet.create({
     height:202,
     borderRadius:10,
   },
-  imagen2:{
-    position:'absolute',
-    width:365,
-    height:202,
-    borderRadius:10,
-    left:8,
-    right:8,
-  },
   text1:{
     position:'absolute',
     textAlign:'left',
@@ -119,6 +89,15 @@ const styleSheet = StyleSheet.create({
     top:385,
     width:75,
   },
+  text3:{
+    position:'absolute',
+    textAlign:'left',
+    fontWeight:'700',
+    fontSize:14,
+    left:18,
+    top:225,
+    width:225,
+  },
   input1:{
     position:'absolute',
     width:285,
@@ -136,20 +115,5 @@ const styleSheet = StyleSheet.create({
     backgroundColor:'rgba(239,236,236,1)',
     left:18,
     top:412,
-  },
-  input3:{
-    position:'absolute',
-    width:285,
-    height:48,
-    borderRadius:10,
-    backgroundColor:'rgba(239,236,236,1)',
-    top:285,
-    left:18,
-  },
-  button1:{
-    position:'absolute',
-    left:96,
-    width:129,
-    top:474,
   },
 });
