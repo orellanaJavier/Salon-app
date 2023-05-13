@@ -39,4 +39,4 @@ const styleSheet = StyleSheet.create({
     alignItems:'center',
     justifyContent:'center',
   },
-})
+});
