@@ -1,5 +1,6 @@
 import React from 'react';
 import {View,StyleSheet,Button,Text, ScrollView } from 'react-native';
+import { Card } from 'react-native-paper';
 
 
  function NailsBar() {
@@ -17,9 +18,8 @@ import {View,StyleSheet,Button,Text, ScrollView } from 'react-native';
       </ScrollView>
 
   </View>
-  )
-  
-}
+  );
+};
 
 export default NailsBar;
 
@@ -29,6 +29,6 @@ const styleSheet = StyleSheet.create({
     backgroundColor:'#fff',
     alignItems:'center',
     justifyContent:'center',
-    }  
+    },
 });
 

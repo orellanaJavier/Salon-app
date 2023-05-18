@@ -7,6 +7,7 @@ import NailsBar from './screens/NailsBar';
 import StylingArea from './screens/StylingArea';
 import CabinaArea from './screens/CabinaArea';
 import Registro from './navigation/Registro';
+import { Analytics } from 'firebase/analytics';
 
 
 const Stack = createNativeStackNavigator();
@@ -20,7 +21,8 @@ function HomeScreen({navigation}){
         <Card><Button title='Styling Area' onPress={()=> navigation.navigate('StylingArea')}>
           </Button></Card>
           <Card style={{top:100}}><Button  title='Cabina Area'  onPress={()=> navigation.navigate('CabinaArea')}>
-        </Button></Card>
+        </Button>
+        </Card>
     </View>
   );
 };

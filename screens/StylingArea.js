@@ -13,8 +13,8 @@ import { Card } from 'react-native-paper';
       height:'100%',
       alignItems:'center',
       justifyContent:'center'}}>
-        <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Decoloracion:</Text></Card>
-        <Card><Text  style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Tinturacion:</Text></Card>
+        <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,}}>Decoloracion:</Text></Card>
+        <Card><Text  style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Tinturacion: </Text></Card>
       <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Cortes de cabello</Text></Card>
       <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Alisados</Text></Card>
       <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Tratamientos</Text></Card>
