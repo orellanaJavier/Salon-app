@@ -14,7 +14,7 @@ const Stack = createNativeStackNavigator();
 
 function HomeScreen({navigation}){
   return(
-    <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
+     <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
       <Image resizeMode='cover' source={require('./assets/homescreen.png')} style = {styleSheet.styleImage9}/>
       <Card style={{top:-100}} ><Button title='Nails Bar'  onPress={()=> navigation.navigate('NailsBar')}>
         </Button></Card>
@@ -27,20 +27,7 @@ function HomeScreen({navigation}){
   );
 };
 
-function Login({navigation}){
-  return(
-    <View style={{flex:1,backgroundColor:'rgba(157,228,244,1)'}}>
-      <Image resizeMode='cover' source={require('./assets/imagen1.png')} style = {styleSheet.imagen1}/>
-      <Text style={styleSheet.text3}>!Bienvenido de nuevo!</Text>
-      <Text style={styleSheet.text1}>Email</Text>
-      <TextInput style={styleSheet.input1} placeholder='example@gmail.com'/>
-      <Text style={styleSheet.text2}>Contraseña</Text>
-      <TextInput style={styleSheet.input2} placeholder='21212828'/>
-      <Card style={{position:'absolute',left:96,paddingTop:8,paddingRight:19,paddingLeft:18,paddingBottom:8,width:150,top:474,}}>
-        <Button title='Ingresar' onPress={()=> navigation.navigate('Home')}/></Card>
-    </View>
-  );
-};
+    
 
 function App() {
   return (
@@ -50,7 +37,6 @@ function App() {
     <Stack.Screen name='NailsBar' component={NailsBar}/>
     <Stack.Screen name='StylingArea' component={StylingArea}/>
     <Stack.Screen name='CabinaArea' component={CabinaArea}/>
-    <Stack.Screen name='Login' component={Login}/>
     <Stack.Screen name='Registro' component={Registro}/>
     </Stack.Navigator>
     </NavigationContainer>
