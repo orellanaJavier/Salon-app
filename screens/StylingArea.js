@@ -31,9 +31,9 @@ function handleOnPress (){
         <Text>Agendar</Text>
       </TouchableOpacity>
       <Modal animationType='slide' transparent={true} visible={open}>
-        <View>
-          <View>
-            
+        <View style={styleSheet.centeredView}>
+          <View style={styleSheet.modalView}>
+
           </View>
         </View>
       </Modal>
@@ -52,5 +52,26 @@ const styleSheet = StyleSheet.create({
     backgroundColor:'#fff',
     alignItems:'center',
     justifyContent:'center',
+  },
+  centeredView:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+    marginTop:20
+  },
+  modalView:{
+    margin:20,
+    backgroundColor:'white',
+    borderRadius:10,
+    width:'30%',
+    padding:35,
+    alignItems:'center',
+    shadowColor:'#000',
+    shadowOffset:{
+      width:0,
+      height:2,
+    },
+    shadowOpacity:0.25,
+    elevation:5,
   },
 });
