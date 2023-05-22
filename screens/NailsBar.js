@@ -1,10 +1,16 @@
-import React from 'react';
-import {View,StyleSheet,Button,Text, ScrollView, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import {View,StyleSheet,Button,Text, ScrollView, Modal } from 'react-native';
 import { Card } from 'react-native-paper';
 import { TouchableOpacity } from 'react-native-web';
 
 
  function NailsBar() {
+const [open, setOpen] = useState(false)
+
+function handleOnPress (){
+  setOpen(open);
+}
+
   return(
     <View style = {styleSheet.container}>
     <ScrollView contentContainerStyle = {{
@@ -19,8 +25,9 @@ import { TouchableOpacity } from 'react-native-web';
         <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Pedicure Spa</Text></Card>
         <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Terapia de ozono</Text></Card>
         <TouchableOpacity onPress={handleOnPress}>
-          <Text></Text>
+          <Text>Agendar</Text>
         </TouchableOpacity>
+
       </ScrollView>
 
   </View>
