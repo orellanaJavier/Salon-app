@@ -27,7 +27,9 @@ function handleOnPress (){
         <TouchableOpacity onPress={handleOnPress}>
           <Text>Agendar</Text>
         </TouchableOpacity>
+        <Modal animationType='slide' transparent={true} visible={open}>
 
+        </Modal>
       </ScrollView>
 
   </View>
