@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import {View,StyleSheet,Button,Text, ScrollView, Modal } from 'react-native';
+import {View,StyleSheet,Button,Text, TouchableOpacity, Modal } from 'react-native';
 import { Card } from 'react-native-paper';
-import { TouchableOpacity } from 'react-native-web';
-
+import { ScrollView } from 'react-native';
 
  function NailsBar() {
 const [open, setOpen] = useState(false)
@@ -28,7 +27,9 @@ function handleOnPress (){
           <Text>Agendar</Text>
         </TouchableOpacity>
         <Modal animationType='slide' transparent={true} visible={open}>
-
+          <View style={styleSheet.centeredView}>
+            <View style={styleSheet.modalView}></View>
+          </View>
         </Modal>
       </ScrollView>
 
