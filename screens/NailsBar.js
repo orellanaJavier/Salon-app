@@ -1,6 +1,7 @@
 import React from 'react';
-import {View,StyleSheet,Button,Text, ScrollView } from 'react-native';
+import {View,StyleSheet,Button,Text, ScrollView, TouchableOpacity } from 'react-native';
 import { Card } from 'react-native-paper';
+import { TouchableOpacity } from 'react-native-web';
 
 
  function NailsBar() {
@@ -13,8 +14,13 @@ import { Card } from 'react-native-paper';
       alignItems:'center',
       justifyContent:'center'}}>
         <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Uñas acrilicas</Text></Card>
-        <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Manicure</Text></Card>
-        <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Limado</Text></Card>
+        <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Esmalte</Text></Card>
+        <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Manicura</Text></Card>
+        <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Pedicure Spa</Text></Card>
+        <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Terapia de ozono</Text></Card>
+        <TouchableOpacity onPress={handleOnPress}>
+          <Text></Text>
+        </TouchableOpacity>
       </ScrollView>
 
   </View>
