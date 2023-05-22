@@ -46,5 +46,12 @@ const styleSheet = StyleSheet.create({
     alignItems:'center',
     justifyContent:'center',
     },
+    centeredView:{
+      flex:1,
+      justifyContent:'center',
+      alignItems:'center',
+      marginTop:20
+    },
+    
 });
 
