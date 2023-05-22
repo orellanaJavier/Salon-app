@@ -52,6 +52,21 @@ const styleSheet = StyleSheet.create({
       alignItems:'center',
       marginTop:20
     },
-    
+    modalView:{
+      margin:20,
+      backgroundColor:'white',
+      borderRadius:10,
+      width:'30%',
+      padding:35,
+      alignItems:'center',
+      shadowColor:'#000',
+      shadowOffset:{
+        width:0,
+        height:2,
+      },
+      shadowOpacity:0.25,
+      elevation:5,
+    }
+
 });
 
