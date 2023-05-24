@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { View,StyleSheet, Button,Text,TouchableOpacity,Modal} from 'react-native';
 import { ScrollView } from 'react-native';
 import { Card } from 'react-native-paper';
+import DatePicker from ''
 
  function StylingArea  () {
 const [open, setOpen] = useState(false)
@@ -25,7 +26,6 @@ function handleOnPress (){
       <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Tratamientos</Text></Card>
       <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Planchado</Text></Card>
       <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Pistoleado</Text></Card>
-      
       <Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Secado</Text>
       <Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Peinados</Text>
       <TouchableOpacity onPress={handleOnPress}>
