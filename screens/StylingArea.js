@@ -25,8 +25,9 @@ function handleOnPress (){
       <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Tratamientos</Text></Card>
       <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Planchado</Text></Card>
       <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Pistoleado</Text></Card>
-      <Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Secado</Text>
-      <Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Peinados</Text>
+      <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Secado</Text></Card>
+      <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Peinados</Text></Card>
+      
       <TouchableOpacity onPress={handleOnPress}>
         <Text>Agendar</Text>
       </TouchableOpacity>
