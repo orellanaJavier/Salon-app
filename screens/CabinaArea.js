@@ -13,3 +13,12 @@ function CabinaArea() {
 }
 
 export default CabinaArea;
+
+const styleSheet = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor:'#fff',
+    alignItems:'center',
+    justifyContent:'center',
+  },
+})
