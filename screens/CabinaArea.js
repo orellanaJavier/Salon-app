@@ -7,9 +7,13 @@ import { Card } from 'react-native-paper';
 function CabinaArea() {
   return (
     <View>
+      <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Cortes de cabello</Text></Card>
+      <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Alisados</Text></Card>
+      
 
     </View>
   )
 }
 
 export default CabinaArea;
+
