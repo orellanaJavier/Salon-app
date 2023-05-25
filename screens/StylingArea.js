@@ -2,15 +2,10 @@ import React from 'react';
 import { View,StyleSheet, Button,Text,} from 'react-native';
 import { ScrollView } from 'react-native';
 import { Card } from 'react-native-paper';
-import Agendar from '../navigation/Agendar';
 
-function Servicio({navigation}){
-  <View>
-    <Agendar/>
-  </View>
-}
 
- function StylingArea  ({navigation}) {
+
+ function StylingArea  () {
 
   return (
     <View style = {styleSheet.container}> 
@@ -20,7 +15,8 @@ function Servicio({navigation}){
       height:'100%',
       alignItems:'center',
       justifyContent:'center'}}>
-        <Card style={{top:-20}}><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Decoloracion:</Text></Card>
+        <Card style={{top:-40}}><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Decoloracion:</Text>
+        </Card>
         <Card><Text  style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Tinturacion: </Text></Card>
       <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Cortes de cabello</Text></Card>
       <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Alisados</Text></Card>
