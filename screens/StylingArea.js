@@ -11,8 +11,8 @@ import { Card } from 'react-native-paper';
     <View style = {styleSheet.container}> 
     <ScrollView contentContainerStyle={{
       flex:1,
-      width:'100%',
-      height:'100%',
+      width:'170%',
+      height:'170%',
       alignItems:'center',
       justifyContent:'center'}}>
         <Card style={{top:-40}}><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Decoloracion:</Text>
