@@ -8,6 +8,7 @@ import StylingArea from './screens/StylingArea';
 import CabinaArea from './screens/CabinaArea';
 import Registro from './navigation/Registro';
 import { Analytics } from 'firebase/analytics';
+import Agenda from './navigation/Agenda';
 
 
 const Stack = createNativeStackNavigator();
@@ -38,6 +39,7 @@ function App() {
     <Stack.Screen name='StylingArea' component={StylingArea}/>
     <Stack.Screen name='CabinaArea' component={CabinaArea}/>
     <Stack.Screen name='Registro' component={Registro}/>
+    <Stack.Screen name='Agenda' component={Agenda}/>
     </Stack.Navigator>
     </NavigationContainer>
   );
