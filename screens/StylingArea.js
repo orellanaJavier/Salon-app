@@ -16,6 +16,7 @@ import { Card } from 'react-native-paper';
       alignItems:'center',
       justifyContent:'center'}}>
         <Card style={{top:-40}}><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Decoloracion:</Text>
+        <Text></Text>
         </Card>
         <Card><Text  style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Tinturacion: </Text></Card>
       <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Cortes de cabello</Text></Card>
