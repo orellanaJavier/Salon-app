@@ -5,7 +5,7 @@ import { Card } from 'react-native-paper';
 
 
 
- function StylingArea  () {
+ function StylingArea  ({navigation}) {
 
   return (
     <View style = {styleSheet.container}> 
@@ -26,6 +26,7 @@ import { Card } from 'react-native-paper';
       <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Pistoleado</Text></Card>
       <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Secado</Text></Card>
       <Card><Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:14}}>Peinados</Text></Card>
+      <Button title='Agendar Cita' onPress={()=> navigation.navigate('Agenda')}/>
     </ScrollView>
       
     </View>
