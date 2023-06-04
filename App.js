@@ -9,21 +9,20 @@ import CabinaArea from './screens/CabinaArea';
 import Registro from './navigation/Registro';
 import { Analytics } from 'firebase/analytics';
 import Agenda from './navigation/Agenda';
+import Servicios from './navigation/Servicios';
 
 
 const Stack = createNativeStackNavigator();
 
 function HomeScreen({navigation}){
   return(
-     <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
-      <Image resizeMode='cover' source={require('./assets/homescreen.png')} style = {styleSheet.styleImage9}/>
-      <Card style={{top:-100}} ><Button title='Nails Bar'  onPress={()=> navigation.navigate('NailsBar')}>
-        </Button></Card>
-        <Card><Button title='Styling Area' onPress={()=> navigation.navigate('StylingArea')}>
-          </Button></Card>
-          <Card style={{top:100}}><Button  title='Cabina Area'  onPress={()=> navigation.navigate('CabinaArea')}>
-        </Button>
-        </Card>
+     <View style={{flex:1,alignItems:'center',justifyContent:'center',backgroundColor:'aqua'}}>
+      <Card>
+        <Button title='Agenda' onPress={()=> navigation.navigate('Agenda')}/>
+      </Card>
+      <Card style={{top:50}}>
+        <Button title='Servicios' onPress={()=> navigation.navigate('Servicios')}/>
+      </Card>
     </View>
   );
 };
@@ -40,6 +39,7 @@ function App() {
     <Stack.Screen name='CabinaArea' component={CabinaArea}/>
     <Stack.Screen name='Registro' component={Registro}/>
     <Stack.Screen name='Agenda' component={Agenda}/>
+    <Stack.Screen name='Servicios' component={Servicios}/>
     </Stack.Navigator>
     </NavigationContainer>
   );
@@ -55,55 +55,5 @@ const styleSheet = StyleSheet.create({
     height:563,
     alignItems:'center',
   },
-  imagen1:{
-    position:'absolute',
-    width:365,
-    height:202,
-    borderRadius:10,
-  },
-  text1:{
-    position:'absolute',
-    textAlign:'left',
-    fontWeight:'400',
-    fontSize:14,
-    left:18,
-    top:267,
-    width:43,
-  },
-  text2:{
-    position:'absolute',
-    textAlign:'left',
-    fontWeight:'400',
-    fontSize:14,
-    left:18,
-    top:385,
-    width:75,
-  },
-  text3:{
-    position:'absolute',
-    textAlign:'left',
-    fontWeight:'700',
-    fontSize:14,
-    left:18,
-    top:225,
-    width:225,
-  },
-  input1:{
-    position:'absolute',
-    width:285,
-    height:48,
-    borderRadius:10,
-    backgroundColor:'rgba(239,236,236,1)',
-    top:294,
-    left:18,
-  },
-  input2:{
-    position:'absolute',
-    width:285,
-    height:48,
-    borderRadius:10,
-    backgroundColor:'rgba(239,236,236,1)',
-    left:18,
-    top:412,
-  },
+  
 });
