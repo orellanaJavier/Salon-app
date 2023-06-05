@@ -1,11 +1,15 @@
-import { StyleSheet, Text, View ,Button,SafeAreaView,ScrollView} from 'react-native';
+import { StyleSheet, Text, View ,Button, SafeAreaView,ScrollView,} from 'react-native';
 import React from 'react';
 import { Calendar } from 'react-native-calendars';
 import Day from 'react-native-calendars/src/calendar/day';
 
+
 function Agenda(){
+ 
+
   return(
-    <SafeAreaView>
+    
+<SafeAreaView>
       <ScrollView>
       <Calendar   
       minDate='2023-01-01'
@@ -23,9 +27,8 @@ function Agenda(){
       onMonthChange={(month) => {console.log('current month', month)}} />
       </ScrollView>
     </SafeAreaView>
-    
-  )
-};
+  );
+}
    
 
 export default Agenda;
@@ -35,6 +38,6 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
-        justifyContent: 'space-around',
+        justifyContent: 'center',
       },
 })

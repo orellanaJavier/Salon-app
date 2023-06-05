@@ -17,6 +17,7 @@ const Stack = createNativeStackNavigator();
 function HomeScreen({navigation}){
   return(
      <View style={{flex:1,alignItems:'center',justifyContent:'center',backgroundColor:'aqua'}}>
+      <Image resizeMode='cover' source={require('./assets/imagen1.png')} style={styleSheet.imagen2}/>
       <Card>
         <Button title='Agenda' onPress={()=> navigation.navigate('Agenda')}/>
       </Card>
@@ -48,12 +49,12 @@ function App() {
 export default App;
 
 const styleSheet = StyleSheet.create({
-  styleImage9:{
+  imagen2:{
     position:'absolute',
+    width:365,
+    height:200,
     borderRadius:10,
-    width:326,
-    height:563,
-    alignItems:'center',
+    left:5,paddingTop:8,paddingRight:19,paddingLeft:18,paddingBottom:8,top:0,right:5,
   },
   
 });
