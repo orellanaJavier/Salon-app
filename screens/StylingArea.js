@@ -9,7 +9,8 @@ import { BlurView } from 'expo-blur';
   return (
      <SafeAreaView style={{flex:1,alignItems:'center',justifyContent:'center',backgroundColor:'rgba(23, 240, 238, 0.52)'}}>
       <View style={{backgroundColor:'rgba(2, 11, 10, 0.51)'}}>
-      <BlurView intensity={1000} style={{height:500}}>
+      <BlurView intensity={90}>
+        <View style={{width:300,height:530,borderColor:'black',borderWidth:2,borderRadius:10,padding:10,alignItems:'center'}}>
         <Card style={{top:15}}>
           <Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:10}}>Decoloracion:</Text>
         </Card>
@@ -37,6 +38,8 @@ import { BlurView } from 'expo-blur';
         <Card style={{top:165}}>
         <Text style={{textAlign:'center',fontWeight:'bold',fontSize:14,margin:10}}>Peinados</Text>
         </Card>
+        </View>
+        
     </BlurView>
     </View>
    </SafeAreaView>

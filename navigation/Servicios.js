@@ -13,6 +13,7 @@ function Servicios({navigation}){
           <Card style={{top:100}}><Button  title='Cabina Area'  onPress={()=> navigation.navigate('CabinaArea')}>
         </Button>
         </Card>
+        
     </View>
     )
 }

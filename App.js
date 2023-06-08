@@ -1,5 +1,5 @@
 import { Card } from 'react-native-paper';
-import { StyleSheet, View,Button,Image ,TextInput,Text,ScrollView} from 'react-native';
+import { StyleSheet, View,Button,Image ,TextInput,Text,SafeAreaView} from 'react-native';
 import  React from 'react';
 import { NavigationContainer, } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -9,6 +9,7 @@ import CabinaArea from './screens/CabinaArea';
 import Registro from './navigation/Registro';
 import Agenda from './navigation/Agenda';
 import Servicios from './navigation/Servicios';
+import { BlurView } from 'expo-blur';
 
 
 const Stack = createNativeStackNavigator();
@@ -16,16 +17,21 @@ const Stack = createNativeStackNavigator();
 function HomeScreen({navigation}){
   return(
      <View style={{flex:1,alignItems:'center',justifyContent:'center',backgroundColor:'aqua'}}>
-      <Image resizeMode='cover' source={require('./assets/imagen1.png')} style={styleSheet.imagen2}/>
-      <View style={styleSheet.box}>
-        <Agenda
-         defaultDate={'2023-06-07'}
-         onDateChange={(value)=>console.log(value)}
-        />
-      </View>
-      <Card style={{top:50}}>
-        <Button title='Servicios' onPress={()=> navigation.navigate('Servicios')}/>
-      </Card>
+       <Image resizeMode='cover' source={require('./assets/imagen1.png')} style={styleSheet.imagen2}/>
+        <SafeAreaView style={{flex:1,alignItems:'center',justifyContent:'center',backgroundColor:'rgba(23, 240, 238, 0.52)'}}>
+          <View style={{backgroundColor:'rgba(2, 11, 10, 0.51)'}}>
+            <BlurView intensity={90}>
+              <View style={{width:150,height:150,borderColor:'black',borderWidth:2,borderRadius:10,padding:10,alignItems:'center'}}>
+              <Card >
+             <Button title='Calendario' onPress={()=> navigation.navigate('Agenda')}/>
+            </Card>
+           <Card style={{top:50}}>
+             <Button title='Servicios' onPress={()=> navigation.navigate('Servicios')}/>
+            </Card>
+              </View>
+            </BlurView>
+          </View>
+        </SafeAreaView>
     </View>
   );
 };
@@ -58,7 +64,5 @@ const styleSheet = StyleSheet.create({
     borderRadius:10,
     left:5,paddingTop:8,paddingRight:19,paddingLeft:18,paddingBottom:8,top:0,right:5,
   },
-  box:{
-    alignItems:'center',
-  },
+ 
 });
