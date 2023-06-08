@@ -7,7 +7,6 @@ import NailsBar from './screens/NailsBar';
 import StylingArea from './screens/StylingArea';
 import CabinaArea from './screens/CabinaArea';
 import Registro from './navigation/Registro';
-import { Analytics } from 'firebase/analytics';
 import Agenda from './navigation/Agenda';
 import Servicios from './navigation/Servicios';
 
@@ -18,9 +17,12 @@ function HomeScreen({navigation}){
   return(
      <View style={{flex:1,alignItems:'center',justifyContent:'center',backgroundColor:'aqua'}}>
       <Image resizeMode='cover' source={require('./assets/imagen1.png')} style={styleSheet.imagen2}/>
-      <Card>
-        <Button title='Agenda' onPress={()=> navigation.navigate('Agenda')}/>
-      </Card>
+      <View style={styleSheet.box}>
+        <Agenda
+         defaultDate={'2023-06-07'}
+         onDateChange={(value)=>console.log(value)}
+        />
+      </View>
       <Card style={{top:50}}>
         <Button title='Servicios' onPress={()=> navigation.navigate('Servicios')}/>
       </Card>
@@ -56,5 +58,7 @@ const styleSheet = StyleSheet.create({
     borderRadius:10,
     left:5,paddingTop:8,paddingRight:19,paddingLeft:18,paddingBottom:8,top:0,right:5,
   },
-  
+  box:{
+    alignItems:'center',
+  },
 });
